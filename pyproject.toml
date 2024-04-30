@@ -1,0 +1,19 @@
+[project]
+name = "freeapi-py"
+version = "0.1.0"
+description = "freeapi.app project in Python using FastAPI and MongoDB"
+authors = [
+    { name = "Anshul Raj Verma", email = "111767754+arv-anshul@users.noreply.github.com" },
+]
+requires-python = ">=3.11"
+dependencies = ["fastapi[all]==0.110.2", "motor==3.4.0"]
+
+[project.urls]
+homepage = "https://github.com/arv-anshul/freeapi-py"
+website = "https://arv-anshul.github.io/project/freeapi-py"
+"freeapi.app" = "https://freeapi.app"
+
+[tool.rye]
+managed = true
+virtual = true
+dev-dependencies = []
