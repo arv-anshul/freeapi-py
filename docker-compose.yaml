@@ -1,0 +1,15 @@
+services:
+  freeapi:
+    build:
+      context: .
+    depends_on:
+      - mongo
+    ports:
+      - 8000:8000
+    environment:
+      MONGODB_URL: mongodb://mongo:27017
+
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
