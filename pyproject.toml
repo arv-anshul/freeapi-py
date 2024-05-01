@@ -6,7 +6,7 @@ authors = [
     { name = "Anshul Raj Verma", email = "111767754+arv-anshul@users.noreply.github.com" },
 ]
 requires-python = ">=3.11"
-dependencies = ["fastapi[all]==0.110.2", "motor==3.4.0"]
+dependencies = ["fastapi[all]==0.110.2", "motor==3.4.0", "aiofile==3.8.8"]
 
 [project.urls]
 homepage = "https://github.com/arv-anshul/freeapi-py"

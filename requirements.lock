@@ -7,12 +7,15 @@
 #   all-features: false
 #   with-sources: false
 
+aiofile==3.8.8
 annotated-types==0.6.0
     # via pydantic
 anyio==4.3.0
     # via httpx
     # via starlette
     # via watchfiles
+caio==0.9.13
+    # via aiofile
 certifi==2024.2.2
     # via httpcore
     # via httpx
