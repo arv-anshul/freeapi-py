@@ -34,6 +34,7 @@ docker compose up --build  # For the first time
 - [x] Create Todo APIs.
 - [x] Containerise the FastAPI app with Docker.
 - [x] Use [`uv`][uv] in container for package installation.
+- [x] Add `/quote` routes.
 
 [freeapi.app]: https://freeapi.app
 [rye]: https://rye-up.com
