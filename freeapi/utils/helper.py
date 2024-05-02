@@ -1,5 +1,8 @@
 import secrets
-from typing import Any
+from typing import Any, Literal
+
+import httpx
+from fastapi import HTTPException
 
 
 def get_randint(low: int, high: int, /) -> int:
@@ -23,3 +26,23 @@ def get_paginated_payload(data: list[Any], page: int, limit: int):
         "total_items": total_items,
         "total_pages": total_pages,
     }
+
+
+async def request(
+    method: Literal["GET", "POST"],
+    url: str,
+    /,
+    json: Any = None,
+) -> bytes:
+    r = httpx.request(method, url, json=json)
+    if r.status_code != 200:
+        raise HTTPException(
+            400,
+            {
+                "message": "Error while making project.",
+                "method": method,
+                "url": url,
+                "status_code": r.status_code,
+            },
+        )
+    return r.content
