@@ -3,7 +3,7 @@ import sys
 from fastapi import FastAPI
 
 from freeapi import middleware
-from freeapi.routes import gh, quote, todo
+from freeapi.routes import fun, gh, quote, todo
 
 app = FastAPI(
     title="FreeAPI",
@@ -36,4 +36,9 @@ app.include_router(
     gh.router,
     prefix="/gh",
     tags=["github"],
+)
+app.include_router(
+    fun.router,
+    prefix="/fun",
+    tags=["fun"],
 )
